@@ -130,6 +130,9 @@ echo '{"storage-driver": "overlay2"}' > /etc/docker/daemon.json
 rm -rf /var/lib/docker/*
 systemctl start docker
 
+gunzip /vagrant/nginx-gh.tar.gz
+docker load < /vagrant/nginx-gh.tar
+
 #explicitely set max number of concurrent ssh connections
 echo 'MaxStartups 20' >> /etc/ssh/sshd_config
 sudo service sshd restart
