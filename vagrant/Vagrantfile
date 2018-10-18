@@ -130,10 +130,7 @@ echo '{"storage-driver": "overlay2"}' > /etc/docker/daemon.json
 rm -rf /var/lib/docker/*
 systemctl start docker
 
-gunzip /vagrant/nginx-gh.tar.gz
 docker load < /vagrant/nginx-gh.tar
-
-curl -L https://git.io/getLatestIstio | sh -
 
 #explicitely set max number of concurrent ssh connections
 echo 'MaxStartups 20' >> /etc/ssh/sshd_config

@@ -5,6 +5,8 @@ set -euo pipefail
 # Load defaults, to be overwritten as desired
 . ./defaults
 
+gunzip -k nginx-gh.tar.gz
+
 while true
 do
 read -r -p "Please provide the number of workers for the Kubernetes cluster (0-50) or enter [Q/q] to exit: " input
