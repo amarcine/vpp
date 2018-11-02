@@ -7,7 +7,7 @@ contiv:
   stealFirstNIC: False
   natExternalTraffic: True
   mtuSize: 1450
-  cleanupIdleNATSessions: True
+  cleanupIdleNATSessions: False
   tcpNATSessionTimeout: 180
   otherNATSessionTimeout: 5
   scanIPNeighbors: True
