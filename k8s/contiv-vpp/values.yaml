@@ -15,7 +15,7 @@ contiv:
   ipNeighborStaleThreshold: 4
   serviceLocalEndpointWeight: 1
   disableNATVirtualReassembly: False
-  enablePacketTrace: False
+  enablePacketTrace: True
   crdNodeConfigurationDisabled: True
   ipamConfig:
     podSubnetCIDR: 10.1.0.0/16
