@@ -47,6 +47,7 @@ data:
     ServiceLocalEndpointWeight: {{ .Values.contiv.serviceLocalEndpointWeight }}
     {{- end }}
     DisableNATVirtualReassembly: {{ .Values.contiv.disableNATVirtualReassembly }}
+    EnablePacketTrace: {{ .Values.contiv.enablePacketTrace }}
     CRDNodeConfigurationDisabled: {{ .Values.contiv.crdNodeConfigurationDisabled }}
     IPAMConfig:
       NodeInterconnectDHCP: {{ .Values.contiv.ipamConfig.nodeInterconnectDHCP }}
@@ -100,6 +101,8 @@ data:
     default-level: {{ .Values.logs.defaultLevel }}
     loggers:
       - name: statscollector
+        level: info
+      - name: vpp.if-state
         level: info
   grpc.conf: |
     network: unix
